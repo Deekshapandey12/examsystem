@@ -167,7 +167,7 @@ public class ATMSystem {
         Scanner scanner = new Scanner(System.in);
         ATM atm = new ATM();
 
-        System.out.print("Enter User ID: ");
+        System.out.print("Enter User ID:");
         String userId = scanner.nextLine();
         System.out.print("Enter User PIN: ");
         String userPin = scanner.nextLine();
@@ -175,6 +175,7 @@ public class ATMSystem {
         if (atm.authenticateUser(userId, userPin)) {
             System.out.println("Authentication successful.");
             atm.showMenu();
+            
         } else {
             System.out.println("Invalid User ID or PIN.");
         }
